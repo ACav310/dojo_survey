@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Dojo Survey</title>
+
+</head>
+<body>
+    <div class="container">
+        <div><h1 class="title" >Dojo Survey</h1></div>
+        <form action='/submit' method='post'>
+            <div class="div">
+                <label for='name'>Name:</label>
+                <input type="text" name='name'>
+            </div>
+            <div>
+                <label for"location">Dojo Location:</label>
+                <select name="location" id="location">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Online">Online</option>
+                    <option value="Burbank">Burbank</option>
+                    <option value="Bellevue">Bellevue</option>
+                </select>
+            </div>
+            <div>
+                <label for="favLan">Favorite Language:</label>
+                <select name="favLan" id="favLan">
+                    <option value="" disabled selected> Select </option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="C#">C#</option>
+                </select>
+            </div>
+            <div>
+                <div><label for="comments">Comments:</label></div>
+                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            </div>
+            <input class="blue" type="submit" value="Enter Survey">
+        </form>
+    </div>
+</body>
+</html>
